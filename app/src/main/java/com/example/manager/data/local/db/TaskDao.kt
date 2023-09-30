@@ -21,5 +21,4 @@ interface TaskDao {
 
     @Update
     fun update(task: Task)
-
 }
