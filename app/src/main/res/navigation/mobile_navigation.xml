@@ -41,4 +41,16 @@
         android:label="@string/fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" />
 
+    <fragment
+        android:id="@+id/codeFragment"
+        android:name="com.example.manager.ui.auth.code.CodeFragment"
+        android:label="fragment_code"
+        tools:layout="@layout/fragment_code" />
+
+    <fragment
+        android:id="@+id/phoneFragment"
+        android:name="com.example.manager.ui.auth.phone.PhoneFragment"
+        android:label="fragment_phone"
+        tools:layout="@layout/fragment_phone" />
+
 </navigation>

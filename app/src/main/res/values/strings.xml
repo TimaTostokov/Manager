@@ -24,4 +24,5 @@
     <string name="deletemessage">Вы уверены, что хотите удалить выбранный элемент?</string>
     <string name="yess">Нет</string>
     <string name="nope">Да</string>
+    <string name="auth_success_mesg">Авторизация прошло успешно</string>
 </resources>

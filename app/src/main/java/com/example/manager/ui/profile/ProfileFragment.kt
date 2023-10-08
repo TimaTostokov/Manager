@@ -11,9 +11,12 @@ import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.manager.R
 import com.example.manager.data.local.Pref
 import com.example.manager.databinding.FragmentProfileBinding
 import com.example.manager.utills.loadImage
+import com.google.firebase.auth.FirebaseAuth
 
 class ProfileFragment : Fragment() {
 
@@ -55,6 +58,10 @@ class ProfileFragment : Fragment() {
         binding.profileImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             galleryLauncher.launch(intent)
+        }
+        binding.imgExit.setOnClickListener{
+            FirebaseAuth.getInstance().signOut()
+            findNavController().navigate(R.id.phoneFragment)
         }
     }
 
