@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="#3F51B5"
     tools:context=".ui.auth.code.CodeFragment">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,7 +26,6 @@
             android:layout_margin="16dp"
             android:hint="Напишите код" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <Button
         android:textColor="@color/black"

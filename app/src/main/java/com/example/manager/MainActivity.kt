@@ -35,28 +35,33 @@ class MainActivity : AppCompatActivity() {
         }
 
         val navView: BottomNavigationView = binding.navView
-
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
 
-        if (!pref.isUserShow()) navController.navigate(R.id.onBoardingFragment)
+        if (!pref.isUserShow())
+            navController.navigate(R.id.onBoardingFragment)
 
-        if (FirebaseAuth.getInstance().currentUser?.uid == null) navController.navigate(R.id.phoneFragment)
+        if (FirebaseAuth.getInstance().currentUser?.uid == null) {
+            navController.navigate(R.id.chooseRegisterFragment)
+        }
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home,
                 R.id.navigation_dashboard,
                 R.id.navigation_notifications,
+                R.id.taskFragment,
                 R.id.navigation_profile,
-                R.id.taskFragment
+                R.id.chooseRegisterFragment,
             )
         )
 
         val fragmentsWithoutBottomNav = setOf(
-            R.id.codeFragment,
+            R.id.onBoardingFragment,
             R.id.phoneFragment,
-            R.id.onBoardingFragment
+            R.id.codeFragment,
+            R.id.chooseRegisterFragment
         )
+
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             if (fragmentsWithoutBottomNav.contains(destination.id)) {
                 navView.isVisible = false

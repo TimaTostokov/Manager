@@ -53,4 +53,10 @@
         android:label="fragment_phone"
         tools:layout="@layout/fragment_phone" />
 
+    <fragment
+        android:id="@+id/chooseRegisterFragment"
+        android:name="com.example.manager.ui.auth.googleregis.ChooseRegisterFragment"
+        android:label="fragment_choose_register"
+        tools:layout="@layout/fragment_choose_register" />
+
 </navigation>

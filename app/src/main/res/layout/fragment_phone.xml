@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@color/white"
+    android:background="@color/purple_700"
     tools:context=".ui.auth.phone.PhoneFragment">
 
     <com.google.android.material.textfield.TextInputLayout
