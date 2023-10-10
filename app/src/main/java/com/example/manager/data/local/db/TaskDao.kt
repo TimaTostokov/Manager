@@ -9,7 +9,6 @@ import com.example.manager.model.Task
 
 @Dao
 interface TaskDao {
-
     @Query("SELECT * FROM task")
     fun getAll(): List<Task>
 
@@ -21,5 +20,4 @@ interface TaskDao {
 
     @Update
     fun update(task: Task)
-
 }

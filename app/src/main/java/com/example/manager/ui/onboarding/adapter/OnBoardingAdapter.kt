@@ -18,7 +18,6 @@ class OnBoardingAdapter(private val onClick: () -> Unit) :
         OnBoarding("https://c1.klipartz.com/pngpicture/629/207/sticker-png-book-delivery-freight-transport-truck-package-delivery-logistics-line-vehicle.png", "Здесь могла быть", "ваша реклама"),
     )
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnBoardingViewHolder {
         return OnBoardingViewHolder(
             ItemOnboardingBinding.inflate(
