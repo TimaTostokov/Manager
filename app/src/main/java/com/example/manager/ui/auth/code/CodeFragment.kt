@@ -18,10 +18,6 @@ class CodeFragment : Fragment() {
 
     private lateinit var binding: FragmentCodeBinding
 
-    private val auth: FirebaseAuth by lazy {
-        FirebaseAuth.getInstance()
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

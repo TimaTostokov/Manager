@@ -37,7 +37,6 @@ class ProfileFragment : Fragment() {
             binding.profileImage.loadImage(photoUri.toString())
         }
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,10 +54,12 @@ class ProfileFragment : Fragment() {
         binding.etName.addTextChangedListener {
             pref.saveName(it.toString())
         }
+        
         binding.profileImage.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             galleryLauncher.launch(intent)
         }
+
         binding.imgExit.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
             findNavController().navigate(R.id.phoneFragment)

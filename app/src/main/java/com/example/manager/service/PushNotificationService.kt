@@ -23,7 +23,6 @@ class PushNotificationService : FirebaseMessagingService() {
             "Heads Up Notification",
             NotificationManager.IMPORTANCE_HIGH
         )
-
         getSystemService(NotificationManager::class.java).createNotificationChannel(channel)
 
         val title = message.notification?.title
@@ -44,7 +43,6 @@ class PushNotificationService : FirebaseMessagingService() {
             return
         }
         NotificationManagerCompat.from(this).notify(Random.nextInt(), notification.build())
-
         super.onMessageReceived(message)
     }
 
